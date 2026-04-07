@@ -17,6 +17,10 @@ export const getDB = async () => {
         database: secret.database,
         port: 5432,
 
+        ssl: {
+            rejectUnauthorized: false,
+        },
+
         // IMPORTANT for Lambda stability
         max: 2,
         idleTimeoutMillis: 10000,
