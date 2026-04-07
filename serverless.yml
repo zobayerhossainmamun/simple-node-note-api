@@ -1,0 +1,28 @@
+service: simple-node-note-api
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+
+functions:
+  health:
+    handler: handler.health
+    events:
+      - httpApi:
+          path: /health
+          method: get
+
+  add:
+    handler: handler.add
+    events:
+      - httpApi:
+          path: /add
+          method: post
+
+  list:
+    handler: handler.list
+    events:
+      - httpApi:
+          path: /list
+          method: get

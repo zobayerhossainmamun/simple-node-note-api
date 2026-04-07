@@ -1,0 +1,12 @@
+{
+  "name": "simple-node-note-api",
+  "version": "1.0.0",
+  "description": "Simple node note api",
+  "keywords": ["Note"],
+  "author": "Mamun",
+  "type": "module",
+  "dependencies": {
+    "pg": "^8.11.0",
+    "@aws-sdk/client-secrets-manager": "^3.0.0"
+  }
+}
